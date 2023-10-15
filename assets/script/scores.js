@@ -6,13 +6,16 @@ highScores.sort(function(a, b) {
   return b.score - a.score;
 });
 
-// Get the scoreList element
 var scoreList = document.getElementById('scoreList');
 
 // Generate HTML to display the scores
 var scoresHTML = highScores
-  .map(function(score) {
-    return `<li>${score.initials}: ${score.score}</li>`;
+  .map(function(score, i) {
+    if (i%2===0){
+        return `<li class="evenScore">${score.initials}: ${score.score}</li>`;
+    } else {
+        return `<li class="oddScore">${score.initials}: ${score.score}</li>`;
+    }
   })
   .join('');
 

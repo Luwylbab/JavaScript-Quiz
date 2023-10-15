@@ -1,5 +1,6 @@
 var quiz = document.getElementById('quiz');
 var startBtn = document.getElementById('startBtn');
+var submitBtn = document.getElementById('submitBtn');
 var end = document.getElementById('end');
 var start = document.getElementById('start');
 var quizQuestion = document.getElementById('quizQuestion');
